@@ -1,4 +1,7 @@
 <h1>Artists</h1>
+<% if flash[:alert] %>
+   <div class="alert"><%= flash[:alert] %></div>
+ <% end %>
 <ul>
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist_songs_path(artist) %></li>
